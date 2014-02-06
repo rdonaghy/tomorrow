@@ -1,0 +1,456 @@
+.menu-button {
+    background-color: #C00;
+    background-image: url('../images/arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.menu-button:hover {
+    cursor: pointer;
+}
+
+/*******************************************************************************************************************************
+* LAYOUT #1 LAYOUT #1 LAYOUT #1 LAYOUT #1 LAYOUT #1 LAYOUT #1 LAYOUT #1 LAYOUT #1  LAYOUT #1 LAYOUT #1 LAYOUT #1 *
+*******************************************************************************************************************************/ 
+
+/*      Default Layout: 992px. 
+        Gutters: 24px.
+        Outer margins: 24px.
+        Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+
+/* usernav
+*************************/
+
+ul {
+    display: table;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+#nav-primary ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: table-cell;
+    float: left;
+    position: relative;
+}
+
+
+#nav-primary ul li a {
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+}
+
+
+
+	
+/* dropdowns
+*************************/
+
+#nav-primary ul ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: absolute;
+    z-index: 20001; /* needs to appear over the slidedeck */
+    top: 100%;
+    width: 250px;
+    display: none;
+    left: 0;
+    border-bottom: 1px solid #353535;
+    border-left: 1px solid #353535;
+    border-right: 1px solid #353535;
+}
+
+#nav-primary ul ul #navprimary ul ul {
+    top: 0;
+    left: 95%;
+}
+
+#nav-primary ul ul li {
+    margin: 0 -5px 0 0;
+    padding: 0;
+    float: none;
+    position: relative;
+    list-style: none;
+    display: block;
+}
+
+#nav-primary ul ul li a {
+    display: block;
+    font-size: 14px;
+    text-transform: none;
+}
+
+nav ul a {
+    text-transform: none;
+}
+
+
+
+/* menu-specifc
+*************************/
+
+.menu {
+    z-index: 5;
+    width: 100%;
+}
+
+.menu li:hover {
+    background-color: #FFF;
+}
+
+.menu ul li a {
+    color: #FFF;
+    font-family: "HelveticaNeueW01-77BdCn 692722";
+    padding: 8px 10px;
+    margin-right: 0;
+    display: block;
+}
+
+.menu-top-navigation-container ul li a:link, .menu-top-navigation-container ul li a:visited {
+    text-decoration: none;
+}
+
+.menu ul li:first-child a { /* needs to align with left edge of identifier */
+    padding-left: 20px;
+}
+
+.menu ul li:hover a {
+    color: #C00;
+}
+
+.menu ul li a img {
+    vertical-align: middle;
+}
+
+.menu ul li a:hover {
+    color: #C00;
+    background-color: #fff;
+}
+
+.menu ul li a span {
+    display: block;
+    padding: 0;
+}
+
+#nav-primary ul ul {
+    padding: 10px 10px 10px 10px;
+    background-color: #fff;
+    overflow:hidden;
+    opacity: 0.80;filter:alpha(opacity=70);zoom:1;opacity: 0.90;filter:alpha(opacity=80);zoom:1;
+    width: 250px;
+}
+
+#nav-primary ul ul li a {
+    width: 100%;
+    line-height: 120%;
+    padding-left: 10px; /* should match padding set in .menu ul li a */
+    overflow: hidden;
+    height: auto;
+    color: #000;
+}
+
+#nav-primary ul ul li a:link, #nav-primary ul ul li a:visited {
+    color: #000;
+}
+
+#nav-primary ul ul li a:hover, #nav-primary ul ul li a:active {
+    color: #C00;
+}
+
+
+#nav-primary ul ul li.last a {
+    border-bottom-width: 0;
+}
+
+/*******************************************************************************************************************************
+* LAYOUT #1 LAYOUT #1 LAYOUT #1 LAYOUT #1 LAYOUT #1 LAYOUT #1 LAYOUT #1 LAYOUT #1  LAYOUT #1 LAYOUT #1 LAYOUT #1 *
+*******************************************************************************************************************************/ 
+
+/*      Default Layout: 992px. 
+        Gutters: 24px.
+        Outer margins: 24px.
+        Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+
+.menu-button {
+    display: none;
+}
+
+/****************************************************************************************************************************
+* LAYOUT #2 LAYOUT #2 LAYOUT #2 LAYOUT #2 LAYOUT #2 LAYOUT #2 LAYOUT #2 LAYOUT #2 LAYOUT #2 LAYOUT #2 LAYOUT #2 *
+****************************************************************************************************************************/ 
+
+/*      Tablet Layout: 768px.
+        Gutters: 24px.
+        Outer margins: 28px.
+        Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    
+.activeCorner {
+    z-index: 4 !important;
+}
+
+.menu-button {
+    display: none;
+}
+
+nav {
+    width: 712px;
+    margin: 0 auto;
+}
+
+#nav-primary ul {
+    line-height: 1.2em;
+}
+
+.menu li:hover{
+    background-color: #fff;
+}
+
+.menu ul li a {
+    margin: 0;
+    padding: 0 10px;
+}
+
+.menu ul li a {
+    font-size: 9px;
+}
+
+#nav-primary ul a {
+    font-size: 9px;
+}
+
+#nav-primary ul li {
+    padding: 0;
+}
+
+#nav-primary ul a, #nav-primary ul a:visited, #nav-primary ul a:link {
+    border: none;
+    height: auto;
+    margin: 0;
+}
+
+#nav-primary ul ul {
+    width: 200px;
+}
+
+#nav-primary ul ul li a {
+    width: 90%;
+    font-size: 14px;
+}
+
+}
+
+/*************************************************************************************************************************
+* LAYOUT #4 LAYOUT #4 LAYOUT #4 LAYOUT #4 LAYOUT #4 LAYOUT #4 LAYOUT #4 LAYOUT #4 *LAYOUT #4 LAYOUT #4 LAYOUT #4 LAYOUT #4 *
+*************************************************************************************************************************/ 
+
+
+/*      Mobile Layout: 320px.
+        Gutters: 24px.
+        Outer margins: 34px.
+        Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+    
+.menu-button {
+    background-color: #353535;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 97% center;
+    display: block;
+    width: 300px;
+    padding: 3px 10px;
+}
+
+div.menu-button img {
+    float: right;
+    margin: -37px 20px 0px 200px;
+}
+    
+[role="navigation"] {
+    display: none;
+}
+
+.menu {
+    padding: 0;
+}
+
+.js #nav-primary ul {
+    display: none;
+}
+
+#nav-primary ul {
+    padding-bottom: 6px;
+    text-align: left;
+}
+
+#nav-primary ul li {
+    display: block;
+    float: none;
+    list-style-type: none outside none;
+    position: relative;
+    padding-left: 8px;
+}
+
+#nav-primary ul a, #nav-primary ul a:visited, #nav-primary ul a:link {
+    border: none;
+    color: #FFFFFF;
+    font-weight: normal;
+    padding: 3px 0;
+    text-decoration: none;
+}
+
+#nav-primary ul.usernav li a {
+    border: medium none;
+    cursor: pointer;
+    display: inline-block;
+    float: none;
+    height: auto;
+    padding: 2px 0;
+    text-decoration: none;
+}
+
+#nav-primary ul li:hover a:link, #nav-primary ul li:hover a:visited {
+    color: #353535;
+}
+
+#nav-primary ul li:hover a:hover, #nav-primary ul li:hover a:active {
+    color: #C00;
+}
+
+
+#nav-primary ul ul {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: static;
+    border: none;
+    width: 92%;
+}
+
+.menu ul li a {
+    padding: 2px 0;
+    text-transform: none;
+    height: auto;
+    line-height: 140%;
+}
+
+.hasmore {
+    background-image: url('http://www.northeastern.edu/css/fancydropdown/arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: 95% top;
+}
+
+.menu .hasmore a {
+    overflow: hidden;
+}
+
+#nav-primary ul a {
+    font-size: 14px;
+}
+
+#nav-primary ul ul li a {
+    font-size: 70%;
+    margin: 0;
+}
+
+}
+
+/*************************************************************************************************************************
+* LAYOUT #3 LAYOUT #3 LAYOUT #3 LAYOUT #3 LAYOUT #3 LAYOUT #3 LAYOUT #3 LAYOUT #3 LAYOUT #3 LAYOUT #3 LAYOUT #3 *
+*************************************************************************************************************************/ 
+
+/*      Wide Mobile Layout: 480px.
+        Gutters: 24px.
+        Outer margins: 22px.
+        Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    
+.menu-button {
+    background-color: #353535;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    display: block;
+    width: 100%;
+    padding: 3px 0;
+}
+
+[role="navigation"] {
+    display: none;
+}
+
+.menu {
+    padding: 0;
+}
+
+.js #nav-primary ul {
+    display: none;
+}
+
+#nav-primary ul {
+    background-color: #353535;
+    text-align: left;
+}
+
+#nav-primary ul li {
+    display: block;
+    float: none;
+    list-style-type: none outside none;
+    position: relative;
+    padding-left: 8px;
+}
+
+#nav-primary ul a, #nav-primary ul a:visited, #nav-primary ul a:link {
+    border: none;
+    color: #FFFFFF;
+    font-weight: normal;
+    padding: 3px 0;
+    text-decoration: none;
+}
+
+#nav-primary ul ul {
+    position: static;
+    border: none;
+}
+
+.menu .hasmore a {
+    overflow: hidden;
+}
+
+#nav-primary ul ul li a {
+    padding:2px 2px;
+}
+
+#nav-primary ul a {
+    font-size: 14px;
+}
+
+}

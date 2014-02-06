@@ -1,0 +1,262 @@
+/*
+Styles for the javascript homepage image slider
+*/
+
+/*needed for sticky footer */
+html,body{ 
+    height: 100%
+}
+
+#header {
+	width: 100%;
+	height: 55px;
+	background-color: #FFF;
+	padding: 10px 0px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+
+#header .logo {
+	padding-left: 15%;
+}
+
+img.bg {
+	min-height: 100%;
+	min-width: 800px;
+	/* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
+	/* Set up positioning */
+	position: fixed;
+	top: 0;
+	left: 0;
+	/* set z-index */
+	z-index: 1;
+}
+
+img.show {
+	z-index: 2;
+}
+
+@media screen and (max-width: 800px) { /* Specific to this particular image */
+	img.bg {
+		left: 50%;
+		margin-left: -400px;   /* 50% */
+	}
+}
+
+#holder{
+    min-height: 100%;
+    position:relative;
+}
+
+#content {
+    padding-bottom: 95px;    /* height of footer */
+}
+   
+/* end sticky footer part */
+body { margin: 0; padding: 0; }
+
+.images img {
+	height: 100%;
+    width: 100%;
+}
+
+/* BUTTON STYLES */
+
+#buttons {
+    background-color: #FFFFFF;
+    float: left;
+    margin-top: 30%;
+	margin-left: 15%;
+    position: relative;
+}
+.circle {
+	height: 150px;
+	-moz-border-radius:75px;
+	-webkit-border-radius: 75px;
+	width: 150px;
+	text-align: center;
+	vertical-align: middle;
+}
+#buttons a {
+	width:150px;
+	height:150px;
+	float:left;
+	margin:0 6px 0 0;
+	padding: 0;
+	display:block;
+	font-size:12px;
+	background: rgb(153, 153, 153);
+	background: rgba(153, 153, 153, 0.8);
+	color: #FFF;
+	font-weight: bold;
+	border-radius: 75px;
+	-moz-border-radius: 75px;
+	z-index: 2;
+}
+#buttons a#drug-discovery:hover, #buttons a#drug-discovery.current {
+	background: rgb(200, 131, 225);
+	background: rgba(200, 131, 225, 0.8);
+	z-index: 3;
+}
+#buttons a#chemistry:hover, #buttons a#chemistry.current {
+	background: rgb(207, 124, 214);
+	background: rgba(207, 124, 214, 0.8);
+	z-index: 3;
+}
+#buttons a#computer-science:hover, #buttons a#computer-science.current {
+	background: rgb(188, 115, 194);
+	background: rgba(188, 115, 194, 0.8);
+	z-index: 3;
+}
+#buttons a span {
+  display: inline-block;
+  margin-top: 65px;
+}
+
+#drug-discovery {
+	position: absolute;
+	top: 100px;
+	left: 0;
+}
+
+#chemistry {
+	position: absolute;
+	top: 0px;
+	left: 65px;
+}
+
+#computer-science {
+	position: absolute;
+	top: 100px;
+	left: 130px;
+}
+
+/* text styles */
+#text {
+    background-color: transparent;
+    float: left;
+    margin-top: 30%;
+	margin-left: 35%;
+    position: relative;
+}
+
+/* FOOTER STYLES */
+
+footer{
+	height: 99px; 
+	width:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+	background-color: #636363 !important;
+	color: #FFFFFF;
+    display: block;
+    font-size: 12px;
+	letter-spacing: 0.03em;
+    text-align: left;
+    width: 100%;
+	z-index: 50;
+}
+
+footer #wrapper {
+	padding: 0px 15%;
+	margin: 0px;
+}
+
+footer a.logo {
+    background: url('http://northeastern.edu/masterplan/wp-content/themes/northeastern_one/footer/NUlogo-footer.png') no-repeat scroll left top transparent;
+    float: left;
+    width: 173px;
+    height: 17px;
+    color: #FFF;
+    font-family: Georgia,Times,Arial,serif;
+    font-size: 18px;
+    margin-right: 20px;
+    padding: 0;
+    text-decoration: none;
+}
+
+footer a.logo:hover {
+    background: url("http://northeastern.edu/masterplan/wp-content/themes/northeastern_one/footer/NUlogo-rollover-footer.png") no-repeat scroll left top transparent;
+}
+
+footer a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.info {
+    display: inline;
+    float: left;
+    font-size: 12px;
+    list-style-type: none;
+    margin: 0 0 10px 0;
+	padding: 0;
+    color: #CCC;
+}
+
+.info li {
+    float: left;
+    margin-right: 4px;
+}
+
+.info li:after {
+    content: "\20\00b7";
+}
+
+.info li:last-child:after {
+    content: "";
+    margin-right: 0;
+    padding-right: 0;
+}
+
+footer .info a:link, footer .info a:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+    
+footer .info a:hover, footer .info a:active {
+    color: #CCC;
+    text-decoration: underline;
+}
+
+.social-media {
+    display: inline;
+    float: right;
+    list-style-type: none;
+    font-size: 11px;
+    margin: 0;
+}
+
+.social-media li {
+    float: left;
+    margin-right: 10px;
+}
+
+.social-media li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.social-media img {
+    margin: 0;
+    float: left;
+}
+
+.social-media a img {
+    border: 0;
+    padding: 0;
+}
+
+footer .contact {
+    clear: both;
+    font-size: 90%;
+    line-height: 1.4em;
+    margin: 0 0 0 193px;
+    padding: 0;
+    color: #CCC;
+}
